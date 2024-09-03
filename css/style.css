@@ -1,0 +1,184 @@
+:root {
+  --primary: rgb(95, 92, 92);
+  --bg: #010101;
+  --gradient-bg: linear-gradient(19deg, #3ecaec 0%, #ee74e1 100%);
+}
+
+* {
+  font-family: "poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.search-icon .feather {
+  width: 24px;
+  height: 24px;
+  stroke: currentColor;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+}
+
+body {
+  background-color: #eaeaea;
+  background-image: var(--gradient-bg);
+  background-size: 200%;
+  /* background-position: left; */
+  min-height: 100vh;
+  animation: animasi-bg 25s infinite alternate;
+}
+
+@keyframes animasi-bg {
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  padding: 1.4rem 7%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.animasi-gue {
+  justify-content: center;
+  margin-top: 100px;
+
+  display: flex;
+  background-image: linear-gradient(to right, blue, red, green);
+  /* -webkit-background-clip: text; */
+  color: transparent;
+  border-radius: 50px;
+  background-size: 100% 10px 10px;
+  background-repeat: no-repeat;
+}
+
+.navbar-logo {
+  font-family: "Pirata One", system-ui;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: white;
+}
+
+.navbar-logo span {
+  font-family: "Pirata One", system-ui;
+  color: var(--primary);
+}
+
+.navbar-nav {
+  tex
+  display: inline-flex;
+  color: white;
+}
+
+.navbar-nav a {
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  position: relative;
+  top: -5px;
+  padding-right: 20px;
+  padding-left: 5px;
+  color: white;
+}
+
+.navbar-nav a:hover {
+  background: linear-gradient(to right, red, white);
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: 700;
+}
+
+.navbar-nav a::after {
+  position: absolute;
+  content: "";
+  /* border-bottom: 0.1rem solid blue; */
+  background: linear-gradient(to right, red, blue, purple);
+  background-size: 200% 100%;
+  left: 9px;
+  height: 2px;
+  width: 0;
+  bottom: -10px;
+  transition: 0.2s linear;
+}
+
+.navbar-nav a:hover::after {
+  width: 55%;
+}
+
+.search-form {
+  text-align: center;
+  display: flex;
+  margin-top: -2px;
+  background-color: white;
+  border-radius: 50px;
+}
+
+.search-form input {
+  border-radius: 50px;
+  padding: 0.5rem;
+  height: 100%;
+  width: 20rem;
+}
+
+.search-form .search-icon {
+  display: flex;
+  stroke-width: 3px;
+  color: black;
+  padding: 0.3rem;
+  cursor: pointer;
+}
+
+.navbar-ekstra {
+  display: inline-flex;
+}
+
+.navbar-ekstra a {
+  align-items: center;
+  font-size: 18px;
+  color: white;
+  padding: 10px;
+  position: relative;
+  /* top: -px; */
+}
+
+.navbar-ekstra a:hover {
+  background: linear-gradient(to right, red, white);
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: 700;
+}
+
+.navbar-ekstra a::after {
+  position: absolute;
+  content: "";
+  /* justify-content: center; */
+  /* border-bottom: 0.1rem solid blue; */
+  background: linear-gradient(to right, red, blue, purple);
+  background-size: 200% 100%;
+  left: 20px;
+  height: 2px;
+  width: 0%;
+  bottom: 1px;
+  transition: 0.2s linear;
+}
+
+.navbar-ekstra a:hover::after {
+  width: 55%;
+}
